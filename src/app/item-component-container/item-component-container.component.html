@@ -1,0 +1,16 @@
+<div [style.background-color]="selectedColor === tempItem ? selectedColor.colorName : 'white'">
+  <div class="item-container" (click)="changeText()">
+    <h1>{{tempItem.text}}</h1>
+    <h2>{{tempItem.id}}</h2>
+    <div *ngFor="let item of tempArrayData">
+      <div *ngIf="item !== tempItem">
+        {{item.text}}
+      </div>
+    </div>
+    <button (click)="changeColor(); $event.stopPropagation();">Click me</button>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,13 @@
+<div class="container">
+  <app-component-container [data]="divideData1"
+                           [tempArrayData]="tempArrayData"
+                           (eventEmitterInComponentContainer)="addTextComponents($event)"
+                           [randComponentForFillColor]="randomSelectedComponentForFillColor"
+                           (eventEmitterChangeColor)="addColorComponent($event)"></app-component-container>
+
+  <app-component-container [data]="divideData2"
+                           [tempArrayData]="tempArrayData"
+                           [randComponentForFillColor]="randomSelectedComponentForFillColor"
+                           (eventEmitterInComponentContainer)="addTextComponents($event)"
+                           (eventEmitterChangeColor)="addColorComponent($event)"></app-component-container>
+</div>

@@ -1,0 +1,8 @@
+<div class="grid-container">
+  <app-item-component-container *ngFor="let item of data" [tempItem]="item"
+                                [tempArrayData]="tempArrayData"
+                                [selectedColor]="randComponentForFillColor"
+                                (eventEmitterInItemComponentItemData)="addTextForItemsComponents($event)"
+                                (eventEmitterChangeColor)="changeItemComponentColor($event)"
+  ></app-item-component-container>
+</div>

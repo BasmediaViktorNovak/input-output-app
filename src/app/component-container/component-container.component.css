@@ -1,0 +1,8 @@
+.grid-container{
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  border: 3px solid red;
+  width: 90%;
+  height: auto;
+  margin: 1.5em auto;
+}
