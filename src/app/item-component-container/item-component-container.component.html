@@ -1,0 +1,14 @@
+<div *ngFor="let tempItem of data.data">
+  <div [style.background-color]=" selectColor && selectColor.id === tempItem.id ? selectColor.colorName : 'white'">
+    <div class="item-container" (click)="changeText(tempItem.id)">
+      <h1>{{tempItem.text}}</h1>
+      <h2>{{tempItem.id}}</h2>
+      <div *ngFor="let item of sharingArrayData">
+        <div *ngIf="item !== tempItem">
+          {{item.text}}
+        </div>
+      </div>
+      <button (click)="changeColor(tempItem.id); $event.stopPropagation();">Click me</button>
+    </div>
+  </div>
+</div>
